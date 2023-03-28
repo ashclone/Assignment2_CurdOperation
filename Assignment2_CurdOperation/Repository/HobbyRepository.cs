@@ -18,6 +18,8 @@ namespace Assignment2_CurdOperation.Repository
         public async Task<List<Hobby>> GetHobbies()
         {
             return await _context.Hobbies.ToListAsync();
+///first branch
         }
+
     }
 }
