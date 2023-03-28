@@ -12,6 +12,7 @@ namespace Assignment2_CurdOperation.Repository
         public HobbyRepository(ApplicationDbContext context)
         {
             _context = context;
+            ///6546546
         }
 
         public async Task<List<Hobby>> GetHobbies()
