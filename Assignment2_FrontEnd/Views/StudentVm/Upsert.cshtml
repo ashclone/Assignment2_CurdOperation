@@ -1,0 +1,112 @@
+﻿@model Assignment2_FrontEnd.Models.StudentVm
+
+@{
+    ViewData["Title"] = "Upsert";
+    var title = Model.Id != 0 ? "Edit Employee" : "New Employee";
+    var saveUpdate = Model.Id != 0 ? "Update" : "Save";
+}
+
+
+
+<h2 class="text-primary ">@title</h2>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Upsert">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <input asp-for="Id" hidden class="form-control" />
+
+            <div class="form-group">
+                <label asp-for="Name" class="control-label"></label>
+                <input asp-for="Name" class="form-control" placeholder="Enter Your Name" />
+                <span asp-validation-for="Name" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Email" class="control-label"></label>
+                <input asp-for="Email" class="form-control" placeholder="Enter Email" />
+                <span asp-validation-for="Email" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Address" class="control-label"></label>
+                <input asp-for="Address" class="form-control" placeholder="Enter Address" />
+                <span asp-validation-for="Address" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Age" class="control-label"></label>
+                <input asp-for="Age" name="Age" class="form-control numbers " placeholder="Enter Age" />
+                <span asp-validation-for="Age" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Salary" class="control-label"></label>
+                <input asp-for="Salary" class="form-control numbers" placeholder="Enter Salary" />
+                <span asp-validation-for="Salary" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Bio" class="control-label"></label>
+                <textarea asp-for="Bio" id="Bio" placeholder="Enter Bio"></textarea>
+                <span asp-validation-for="Bio" class="text-danger"></span>
+            </div>
+
+            <div class="form-group">
+                <label class="control-label">Hobbies </label>
+                <select id="hobbies-dropdown" asp-for="hob" multiple="multiple" class="form-control">
+                    @for (int i = 0; i < ViewBag.hobbies.Count; i++)
+                    {
+                        <option value="@ViewBag.Hobbies[i].Value">
+                            @ViewBag.Hobbies[i].Text
+                        </option>
+                    }
+                </select>
+                <span asp-validation-for="hob" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <button type="submit" class="btn btn-primary">@saveUpdate</button>
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{
+        await Html.RenderPartialAsync("_ValidationScriptsPartial");
+    }
+    <script src="~/ckeditor/ckeditor.js"></script>
+    <script>
+        $(document).ready(function () {
+            CKEDITOR.replace('Bio', {
+                height: 100,
+            });
+
+        });
+
+    </script>
+    <script>
+        $(document).ready(function () {
+            
+            $(".numbers").keypress(function (e) {
+                //if the letter is not digit then display error and don't type anything
+                if (e.which != 8 && e.which != 0 && (e.which < 48 || e.which > 57)) {
+                    //display error message
+                    //alert("Insert Only Numbers");
+                    return false;
+                }
+            });
+
+        });
+
+    </script>
+    <script src="https://cdn.rawgit.com/davidstutz/bootstrap-multiselect/master/dist/js/bootstrap-multiselect.js" type="text/javascript"></script>
+    <script type="text/javascript">
+        $(function () {
+            $('#hobbies-dropdown').multiselect({
+                includeSelectAllOption: true
+            });
+
+        });
+    </script>
+
+}

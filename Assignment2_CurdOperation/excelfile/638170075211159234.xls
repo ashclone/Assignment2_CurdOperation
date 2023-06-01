@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+
+</head>
+<body>
+    <table>
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Name</th>
+                <th>Age</th>
+                <th>Address</th>
+                <th>Email</th>
+                <th>Salary</th>
+                <th>Bio</th>
+                <th>Hobby</th>
+                <th>Salary</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr><td>3</td><td>Manish Pandey</td><td>23</td><td>Chandigarh</td><td>manishPandey@gmail.com</td><td>60000</td><td><p><em><strong>bio of Manish Kumar</strong></em></p></td><td>System.String[]</td></tr><tr><td>8</td><td>Honey</td><td>22</td><td>Alwar</td><td>honeymoney@hotmail.com</td><td>59999</td><td><p>honey bio</p></td><td>System.String[]</td></tr><tr><td>9</td><td>Anshul</td><td>22</td><td>Varanasi</td><td>aanshul@yahoo.com</td><td>56000</td><td><p>Bio of Anshul</p></td><td>System.String[]</td></tr><tr><td>26</td><td>Harish</td><td>22</td><td>Chandigarh</td><td>harish@gmail.com</td><td>30000</td><td>bio of harish</td><td>System.String[]</td></tr><tr><td>28</td><td>Murari</td><td>28</td><td>Chennai</td><td>murari123+local@gmail.com</td><td>30000</td><td><p>bio of murari</p></td><td>System.String[]</td></tr><tr><td>5</td><td>Sham</td><td>25</td><td>Delhi</td><td>Sham123@gmail.com</td><td>50000</td><td><p><strong>Sham Bio</strong></p></td><td>System.String[]</td></tr><tr><td>29</td><td>Vivak</td><td>25</td><td>gurugram</td><td>vivake@gmail.com</td><td>50000</td><td><p>bio of vivak</p></td><td>System.String[]</td></tr><tr><td>22</td><td>Banty</td><td>22</td><td>coimbature</td><td>banty@gmail.com</td><td>59999</td><td><p>bio of Banty</p></td><td>System.String[]</td></tr><tr><td>34</td><td>Tanusha</td><td>22</td><td>Pune</td><td>tanusha@gmail.com</td><td>56000</td><td><p>bio of tanusha</p></td><td>System.String[]</td></tr><tr><td>30</td><td>Sham</td><td>25</td><td>Coimbature</td><td>sham@gmail.com</td><td>50000</td><td><p>bio of Shama</p></td><td>System.String[]</td></tr><tr><td>31</td><td>Mohan</td><td>25</td><td>Pune</td><td>mohan@gmail.com</td><td>45000</td><td><p>bio of Mohan</p></td><td>System.String[]</td></tr><tr><td>33</td><td>Gopal</td><td>23</td><td>Pune</td><td>gopal@gmail.com</td><td>50000</td><td><p>bio of gopal</p><p>&nbsp;</p></td><td>System.String[]</td></tr><tr><td>27</td><td>Tamana</td><td>22</td><td>Pune</td><td>tamana@gmail.com</td><td>50000</td><td><p>bio of Tamana</p></td><td>System.String[]</td></tr><tr><td>35</td><td>Komal</td><td>22</td><td>pune</td><td>komal@gmail.com</td><td>40000</td><td><p>bio of Komal</p></td><td>System.String[]</td></tr>
+
+        </tbody>
+    </table>
+</body>
+</html>

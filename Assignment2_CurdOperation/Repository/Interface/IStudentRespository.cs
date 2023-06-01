@@ -1,4 +1,5 @@
 ﻿using Assignment2_CurdOperation.Modals;
+using Assignment2_CurdOperation.ViewModals;
 
 namespace Assignment2_CurdOperation.Repository.Interface
 {
@@ -9,6 +10,7 @@ namespace Assignment2_CurdOperation.Repository.Interface
         Task AddStudent(Student student);
         Task UpdateStudent(Student student);
         Task DeleteStudent(int id);
+       
 
     }
 }
